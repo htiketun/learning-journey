@@ -1,0 +1,2 @@
+-- Migration file: database/migrations/create_jobs_table.php
+-- Generated for learning month 2
