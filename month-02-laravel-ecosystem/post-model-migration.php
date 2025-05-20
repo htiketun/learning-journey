@@ -1,9 +1,9 @@
 <?php
 /**
  * Eloquent Relationships Implementation
- * Learning Date: May 12, 2025
+ * Learning Date: May 20, 2025
  * Month: Laravel Ecosystem & APIs
- * Iteration: 12
+ * Iteration: 22
  */
 
 namespace App\Learning\LaravelEcosystem&APIs;
@@ -26,7 +26,7 @@ class EloquentRelationships
     {
         // Initialize eloquent relationships functionality
         $this->data = [
-            'version' => '12.0',
+            'version' => '22.0',
             'topic' => 'Eloquent Relationships',
             'learning_date' => $this->createdAt->format('Y-m-d'),
             'status' => 'learning'
@@ -59,7 +59,7 @@ class EloquentRelationships
         // Implementation specific to Eloquent Relationships
         return [
             'processed_at' => date('Y-m-d H:i:s'),
-            'iteration' => 12,
+            'iteration' => 22,
             'topic' => 'Eloquent Relationships',
             'learning_notes' => $this->getLearningNotes()
         ];
