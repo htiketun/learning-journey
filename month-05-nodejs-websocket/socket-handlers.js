@@ -1,27 +1,27 @@
 /**
- * Load Testing Implementation
- * Learning Date: August 09, 2025
+ * Event Handling Implementation
+ * Learning Date: August 15, 2025
  * Month: Node.js & WebSocket Development
- * Iteration: 10
+ * Iteration: 15
  */
 
 const EventEmitter = require('events');
 const { v4: uuidv4 } = require('uuid');
 
-class LoadTesting extends EventEmitter {
+class EventHandling extends EventEmitter {
     constructor() {
         super();
         this.id = uuidv4();
         this.createdAt = new Date();
-        this.iteration = 10;
-        this.topic = 'Load Testing';
+        this.iteration = 15;
+        this.topic = 'Event Handling';
         this.data = {};
         this.initialize();
     }
     
     initialize() {
         this.data = {
-            version: '10.0',
+            version: '15.0',
             topic: this.topic,
             learningDate: this.createdAt.toISOString().split('T')[0],
             status: 'learning',
@@ -45,7 +45,7 @@ class LoadTesting extends EventEmitter {
             const response = {
                 success: true,
                 data: result,
-                message: `Load Testing processed successfully`,
+                message: `Event Handling processed successfully`,
                 iteration: this.iteration
             };
             
@@ -58,7 +58,7 @@ class LoadTesting extends EventEmitter {
             const errorResponse = {
                 success: false,
                 error: error.message,
-                message: `Error processing load testing`
+                message: `Error processing event handling`
             };
             
             this.emit('error', errorResponse);
@@ -106,11 +106,11 @@ class LoadTesting extends EventEmitter {
 
 // Demonstration
 async function main() {
-    console.log(`🟨 Load Testing - Learning Session 10`);
+    console.log(`🟨 Event Handling - Learning Session 15`);
     console.log('='.repeat(50));
     
     // Initialize and run
-    const processor = new LoadTesting();
+    const processor = new EventHandling();
     
     // Set up event listeners
     processor.on('initialized', (data) => {
@@ -142,4 +142,4 @@ if (require.main === module) {
     main().catch(console.error);
 }
 
-module.exports = LoadTesting;
+module.exports = EventHandling;
